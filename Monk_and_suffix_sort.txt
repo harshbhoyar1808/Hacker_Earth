@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+vector<string > s;
+
+int main(){
+	ios_base::sync_with_stdio(false);
+	cin.tie(0);
+	int k;
+	string a,b;
+	cin>>a>>k;
+	
+	for(int i=0;a[i];i++){
+		 b = "";
+		for(int j=i;a[j];j++){
+			b+=a[j];
+		}
+		s.push_back(b);
+	}
+	sort(s.begin(),s.end());
+	cout<<s[k-1]<<"\n";
+	return 0;
+}
