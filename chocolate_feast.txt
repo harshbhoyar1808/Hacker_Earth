@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	
+	int n,c,m;
+	cin>>n>>c>>m;
+	
+	
+	// we will need three parameter for chocolae count , eatten count , wrappers count 
+	int eat=0,choco = 0 , wrp = 0 ; 
+	choco = n/c;
+	while(choco > 0 ){
+		eat += choco ;			// number of chocolate eat
+		wrp += choco ;			// number of reaminder wrapper plus  number of chocolate intial we have
+		choco = wrp/m;		// update chocolate by which are exchanged by  m
+		wrp = wrp%m;		//update wrp you have after exchange 
+		
+	}
+	cout<<eat;
+	
+	
+//	cout<<output<<"\n";
+	
+	
+	
+	
+	return 0;
+}
