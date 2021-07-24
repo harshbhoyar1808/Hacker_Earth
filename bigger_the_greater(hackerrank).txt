@@ -1,0 +1,22 @@
+
+Note : copied from internet solve on your own 
+logic is find rightmost smaller letter than is smaller than its succesor , than find char which is greater than pivot but smaller in right subarray 
+swap the two letters and then sort the subarray as you have to find nearest higher number , so the sorted subarray will be the nearest.
+
+#include<bits/stdc++.h>
+using namespace std;
+string st(string s ){
+	if (next_permutation(s.begin(), s.end())) return ("%s", s.c_str());
+        else return ("no answer\n");
+}
+string s;
+int main() {
+    int tc;
+    scanf("%d", &tc);
+    while (tc--) {
+        cin >> s;
+        s = st(s);
+        cout<<s<<"\n";
+    }
+    return 0;
+}

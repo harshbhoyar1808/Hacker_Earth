@@ -1,0 +1,55 @@
+
+Note : 
+	As 'long int' was used for variables it was hard for sample cases to run 
+	dont required of large data set , if constraint are small 
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int partion(int A[], int l , int h){
+	int  i = l + 1 ;
+//	long int j = h;
+	int pivot = A[l];
+//	while(i<j){
+//	while( A[i] < pivot ) i++;
+//	while( A[j] > pivot ) j--;
+//
+//	if (i<j)
+//		swap(A[i] , A[j]);
+//	}
+	
+	for ( int j = l +1;j<=h;j++){
+		if ( A[j] < pivot ){
+			swap(A[i],A[j]);
+			i++;
+		}
+	}
+	swap(A[l],A[i-1]);
+	return i-1 ;	
+}
+
+void Quicksort(int A[] ,int start, int end){
+
+	if(start < end ){
+		int pivot = partion(A,start , end );
+		Quicksort(A,start , pivot - 1 );
+		Quicksort(A , pivot + 1 , end);
+	}
+
+}
+
+int main(){
+	 int n;
+	cin>>n;
+	int arr[n+1];
+	for(int i=1;i<=n;i++)
+		cin>>arr[i];
+
+	Quicksort(arr,1,n);	
+	
+	for(int i=1;i<=n;i++)
+			cout<<arr[i]<<" ";
+	
+	return 0;
+}

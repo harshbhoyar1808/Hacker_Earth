@@ -1,0 +1,56 @@
+#include <bits/stdc++.h>
+using namespace std;
+//
+//void search(int A[],int x , int n ){
+//	int index = 0 ;
+//	int y = x ;
+//	if (n > 1 ){
+//	while(A[index] <= x )
+//		index ++ ; 
+//	cout<<"updated index value is "<< index <<"\n";
+//	while(index <= n ){
+//		x = x + 1;
+//		if( x < A[index] && y < x){
+//			cout<<"result is "<<x<<"\n";
+//			break;
+//		}
+//		index++;	
+//	}
+//	}
+//	else {
+//		//if(x != A[1])
+//			cout<<"result of second case "<<x+1<<"\n";
+//		//else	
+//	}
+//				
+//	
+//}
+//
+//int main()
+//{
+//    // incresing speed of input and output activity
+//    ios_base::sync_with_stdio(false);
+//    cin.tie(NULL);   
+//    // 
+//    int n , q;
+//    cin >> n >> q ;
+//    int A[n];
+//    for(int i =0 ;i< n;i++) cin>>A[i];
+//    
+//    sort(A,A+n);
+//    
+//   	//for(int i =0 ;i< n;i++) cout<<A[i];
+//	
+//	while(q--){
+//		int x;
+//		cin>>x;
+//		search(A,x,n);
+//	}    
+//    	
+//}
+
+
+
+int main(){
+	
+}

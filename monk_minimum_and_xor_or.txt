@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int function(int a[],int n ){
+	unsigned int min= INT_MAX;
+	
+	sort(a,a+n);
+	for(int i=0;i<n-1;i++){
+		int b = (a[i]^a[i+1]);
+		if(min>b)
+			min =b;
+		
+	}
+	return min;
+}
+
+
+int main(){
+	unsigned int t;
+	cin>>t;
+	while(t--){
+		 int n;
+		cin>>n;
+		int arr[n];
+		for(int i=0;i<n;i++)
+			cin>>arr[i];
+		int min = function(arr,n);
+		cout<<min<<endl;
+				
+	}
+	
+
+	return 0;
+}
