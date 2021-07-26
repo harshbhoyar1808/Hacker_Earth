@@ -1,0 +1,44 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+	int t;
+	while(t--){
+	
+	int g[1001][1001];
+	int r,c,R,C;
+	cin>>R>>C;
+	
+	for(int i=0;i<R;i++){
+		for(int j=0;j<C;j++)
+			cin>>g[i][j];
+	}
+	cin>>r>>c;
+	int p[r][c];
+	
+	if(r>R || c>C){
+		cout<<"NO"<<"\n";
+		return 0;
+	}
+	int realchecker = 0;
+	for(int i=0;i<R;i++){
+		for(int j=0;j<C;j++){
+			int checker = 0 ;
+			for(int l=i;l<i+r;l++){
+				for(int z=j;z<j+c;z++){
+					if(g[l][z] != p[l-i][z-j]){
+						checker = 1;
+						break;
+					}
+						
+				}if(checker==1)break;
+			}
+			if(checker==0){realchecker = 1; break;}
+		}	if(realchecker==1) break;
+	}
+	
+	if(realchecker)	cout<<"YES"<<"\n";
+	else cout<<"NO"<<"\n";
+}
+return 0;
+}
