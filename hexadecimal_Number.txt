@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long 
+ll f(ll n){
+	ll ret = 0 ;
+	while( n>0){
+		ret = ret + n%16;
+		n = n/16;
+	}
+	return ret;
+	
+}
+int main(){
+	int t;
+	cin>>t;
+	while(t--){
+		ll l,r;
+		cin>>l>>r;
+		ll cnt = 0;
+		
+		for(;l<=r;l++){
+			if(__gcd(l,f(l)) > 1)
+				cnt++;
+		}
+		cout<<cnt<<"\n";
+	}
+}

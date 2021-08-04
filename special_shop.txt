@@ -1,0 +1,28 @@
+/*
+	logic is f`(x)=0, gives us minimume value of x ,so we get value of x = n*b/(a+b) , as i have used long function so it will give me floor value so needed to use or increse value by 1 of x 
+*/
+
+
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+int main(){
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	
+	ll n,t,a,b;
+	cin>>t;
+	while(t--){
+	
+		cin>>n>>a>>b;
+		
+		ll x = (n*b)/(a+b);
+		ll x1 = x+1;
+		ll y = n-x;
+		ll y1 = n-x1;
+		ll cost1 = x1*x1*a + y1*y1*b;
+		ll cost2 = x*x*a + y*y*b;
+		
+		cout<<min(cost1,cost2)<<endl;	
+	}
+}
