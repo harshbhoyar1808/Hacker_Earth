@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+void solve (int a[],int n){
+	int exp_first = 1 , exp_second = 2 , exp_third = 3 , count = 0;
+		for(int i=1;i<n+1;i++){
+			if( a[i] == exp_first){
+				exp_first = exp_second;
+				exp_second = exp_third;
+				++exp_third;
+			}
+			else if(a[i] == exp_second){
+				count = count + 1;
+				exp_second = exp_third;
+				++exp_third;
+			}
+			else if(a[i] == exp_third){
+				count = count + 2;
+				++exp_third;
+			}
+			else{
+				cout<<"Too chaotic"<<"\n";
+				return ;
+			}
+		}
+		cout<<count<<endl;
+		return;	
+}
+int main(){
+	int t;
+	cin>>t;
+	while(t--){
+		int n;
+		cin>>n;
+		int a[n+1];
+		for(int i=1;i<=n;i++)	cin>>a[i];
+		solve(a,n);
+	}
+}
