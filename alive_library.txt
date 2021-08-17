@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+	
+	string str;
+	stack<char> s;
+	queue<char> q ;
+	
+	cin>>str;
+	int i=0;
+	while(str[i] != '\0'){
+		if(str[i] =='\\'){
+			while(s.top() != '/'){
+				q.push(s.top());
+				s.pop();
+			}
+			s.pop();
+			
+			if(s.empty()){
+				while(!q.empty()){
+					cout<<q.front();
+					q.pop();
+				}
+			}
+			else {
+				while(!q.empty()){
+					s.push(q.front());
+					q.pop();
+				}
+			}
+		}
+		else 
+			s.push(str[i]);
+			
+		i++;	
+	}
+	
+	return 0;
+}
