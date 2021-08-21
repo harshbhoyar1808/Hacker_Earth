@@ -1,0 +1,50 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	int n;
+	cin>>n;
+	int max = n ;
+	priority_queue<int> q;
+	int ele;
+	for(int i=0;i<n;i++){
+		cin>>ele;
+		
+		q.push(ele);
+		while(q.top() == max ){
+			cout<<q.top()<<" ";
+			q.pop();
+			max--;
+		}
+		cout<<endl;
+		
+	}
+}
+//int main(){
+//	int n;
+//	cin>>n;
+//	vector<int> arr;
+//	int max = n,p=0;
+//	int ele;
+////	cin>>ele;
+////	arr.push_back(ele);
+//	for(int i=0;i<n;i++){
+//		cin>>ele;
+//		arr.push_back(ele);			// insert element in array
+//		sort(arr.begin(), arr.end(), greater<int>());  // sort element according to descending
+//	 
+//
+//		if( arr[p] == max ){
+//			cout<<"\n Output: ";
+//			while( arr[p] == max && max != 0){
+//				cout<<arr[p]<<" ";
+//				p++;
+//				max--;
+//			}
+//		}
+//		else cout<<endl;
+//		
+//		
+//
+//	}
+//	
+//}
