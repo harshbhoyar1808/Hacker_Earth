@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ld long double
+
+int main(){
+	ld n;
+	cin>>n;
+	vector<ld> cp;
+	
+	while(n--){
+		ld a,b;
+		cin>>a>>b;
+		
+		cp.push_back(sqrtl(a*a+b*b));
+	}
+	sort(cd.begin(),cd.end());
+	ld q;
+	cin>>q;
+	while(q--){
+		ld r;
+		cin>>r;
+		
+		cout<<upper_bound(cd.begin(),cd.end(),r) - cd.begin()<<endl;
+	}
+	return 0;
+}
